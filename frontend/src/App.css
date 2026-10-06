@@ -1,0 +1,228 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #1f2937;
+  background: #f4f6f8;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Login */
+.login-container {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: linear-gradient(135deg, #1e3a8a, #2563eb);
+}
+
+.login-box {
+  width: min(100%, 380px);
+  padding: 40px;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.18);
+}
+
+.login-box h1 {
+  margin: 0 0 8px;
+  text-align: center;
+  color: #1e3a8a;
+}
+
+.login-subtitle {
+  margin: 0 0 30px;
+  color: #6b7280;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px 13px;
+  border: 1px solid #d1d5db;
+  border-radius: 7px;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.login-box button,
+.logout-button,
+.nginx-panel a {
+  border: 0;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.login-box button {
+  width: 100%;
+  padding: 12px;
+  color: #fff;
+  background: #2563eb;
+  font-weight: 600;
+}
+
+.login-box button:hover {
+  background: #1d4ed8;
+}
+
+.login-box button:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+}
+
+.error-message {
+  margin: 0 0 15px;
+  padding: 10px;
+  color: #b91c1c;
+  background: #fee2e2;
+  border-radius: 7px;
+  text-align: center;
+}
+
+/* Dashboard */
+.dashboard-container {
+  min-height: 100vh;
+  padding: 40px 24px;
+}
+
+.dashboard-card {
+  width: min(100%, 900px);
+  margin: 0 auto;
+  padding: 40px;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
+}
+
+.dashboard-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: #2563eb;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.dashboard-card h1,
+.dashboard-card h2 {
+  margin-top: 0;
+}
+
+.dashboard-message {
+  margin: 8px 0 0;
+  color: #6b7280;
+}
+
+.role-badge {
+  flex-shrink: 0;
+  padding: 8px 14px;
+  border-radius: 999px;
+  color: #3730a3;
+  background: #e0e7ff;
+  font-weight: 700;
+}
+
+.nginx-panel,
+.dashboard-item {
+  margin-top: 30px;
+  padding: 24px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  background: #f8fafc;
+}
+
+.nginx-panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.nginx-panel h2,
+.dashboard-item h2 {
+  margin-bottom: 8px;
+}
+
+.nginx-panel p,
+.dashboard-item p {
+  margin: 0;
+  color: #6b7280;
+}
+
+.nginx-panel a {
+  padding: 11px 18px;
+  color: #fff;
+  background: #2563eb;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.nginx-panel a:hover {
+  background: #1d4ed8;
+}
+
+.logout-button {
+  margin-top: 30px;
+  padding: 11px 22px;
+  color: #fff;
+  background: #dc2626;
+  font-weight: 600;
+}
+
+.logout-button:hover {
+  background: #b91c1c;
+}
+
+@media (max-width: 600px) {
+  .login-box,
+  .dashboard-card {
+    padding: 28px;
+  }
+
+  .dashboard-container {
+    padding: 20px;
+  }
+
+  .dashboard-header,
+  .nginx-panel {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .nginx-panel a {
+    text-align: center;
+  }
+}
